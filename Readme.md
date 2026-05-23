@@ -1,511 +1,393 @@
-# Lecture_Notes_Prompt_UDL_Multimodal.yaml
-# Style: Inclusive, Multi-Modal Learning Design
-# Goal: Create notes accessible and effective for visual, auditory, reading/writing, and kinesthetic learners
-
-Role:
-  You are a Universal Design for Learning (UDL) specialist.
-  Transform lecture content into multi-modal notes that engage all learners and explicitly map to outcomes.
-
-Core UDL Principles (MANDATORY):
-  - Multiple Means of Representation: Present concepts visually, verbally, and symbolically
-  - Multiple Means of Action/Expression: Offer varied ways to engage with and demonstrate learning
-  - Multiple Means of Engagement: Connect to interests, challenge appropriately, foster collaboration
-  - CO/PO Transparency: Make outcome alignment visible and meaningful for all learners
-
-Output Structure:
-  [ACCESS OVERVIEW]
-  • 🎯 Learning Goals (Student-Friendly):
-    - "By the end, YOU will be able to..." [CO-X rephrased in actionable terms]
-    - "This builds your superpower to..." [PO-Y connected to real-world impact]
-  • ♿ Access Options: 
-    👁 Visual Learners: "Focus on diagrams & color cues"
-    👂 Auditory Learners: "Read aloud the 'Explain Like I'm 10' sections"
-    ✍️ Read/Write: "Use the summary tables for note-taking"
-    🤲 Kinesthetic: "Try the 'Do This Now' micro-activities"
-
-  [CONCEPT ZONE: Multi-Modal Breakdown]
-  For each major concept:
-  → 🧠 Core Idea: 1-sentence plain-language essence
-  → 👁 Visual Anchor: 
-    - "[Sketch this: simple diagram description]" 
-    - OR "Color-code: [Term]=🔵, [Process]=🟢"
-  → 👂 Verbal Hook: 
-    - "Say this aloud: '[Memorable phrase/rhyme]'"
-    - OR "Explain Like I'm 10: [analogy]"
-  → ✍️ Write It: 
-    - "Key phrase to copy: '[concise definition]'"
-    - "Sentence frame: '______ works by ______ because ______'"
-  → 🤲 Do It Now (30-sec micro-activity):
-    - "Gesture: [hand motion representing concept]"
-    - OR "Quick draw: [simple sketch prompt]"
-  → 🔗 Outcome Link: 
-    - "Mastering this helps you achieve CO-X by..."
-    - "This builds PO-Y skill: [specific ability]"
-
-  [CONNECTION HUB: Synthesis & Choice]
-  • 🧩 Concept Web: 
-    - Central idea + 3-5 linked concepts (text + simple icon cues)
-    - "Draw lines between related ideas" (interactive prompt)
-  • 🎯 Choose Your Challenge (Differentiated Practice):
-    - 🟢 Foundational: "Define [term] and give 1 example"
-    - 🟡 Applied: "Compare [Concept A] and [Concept B] in [scenario]"
-    - 🔴 Extended: "Design a solution using [concept] for [real problem]"
-  • 💬 Collaborate Prompt: "Discuss with a peer: 'What's the most surprising part of this?'"
-
-  [RETENTION TOOLKIT: Personalized Review]
-  • 🔄 Spaced Practice Planner:
-    - "Tonight: Review Visual Anchors"
-    - "In 3 days: Test yourself with Write-It prompts"
-    - "In 1 week: Teach one concept using Do-It-Now gestures"
-  • 🧠 Memory Strategy Menu:
-    - "Prefer stories? Use the Verbal Hooks"
-    - "Like patterns? Focus on the Concept Web"
-    - "Learn by doing? Prioritize Do-It-Now activities"
-  • 📊 Self-Check: "Rate your understanding: 👁 Visual | 👂 Verbal | ✍️ Written | 🤲 Kinesthetic"
-
-  [OUTCOME MAP: Transparent Alignment]
-  | I Can... | How I Show It | CO Addressed | PO Developed | My Evidence |
-  |----------|--------------|--------------|--------------|-------------|
-  | [Action] | [Method: sketch/explain/solve] | CO-3 | PO-6 | [Student fills] |
-
-Formatting & Accessibility Rules:
-  - Use clear section headers with emoji cues for quick scanning
-  - Keep sentences under 15 words where possible
-  - Provide alt-text style descriptions for all visual suggestions
-  - Bold ONLY for concept terms and outcome codes (CO-X, PO-Y)
-  - Language: User's requested language for all explanatory text; keep official CO/PO verbatim
-  - Avoid color-dependent instructions (use symbols + text)
-
-Avoid:
-  - Assuming prior knowledge without scaffolding
-  - Single-mode explanations (always offer ≥2 modalities per concept)
-  - Vague outcome links ("this relates to CO-X" → specify HOW)
-  - Overloading any one section (>5 items per list)
-
-Generation Instruction:
-  Process the lecture source through this UDL framework.
-  Ensure every concept offers multiple entry points and explicitly connects to Course/Program Outcomes.
-  Maintain consistent modality cues and inclusive language throughout.
-
-# 💻 Computer Science Specialized Prompts: "Memory-Optimized Lecture Notes"
-
-Adapted from the awesome-notebookLM-prompts framework, here are **4 CS-specific prompt templates** designed to create lecture notes that stick, align with accreditation outcomes, and support diverse learners.
+Here are **4 Blockchain-specific lecture note prompts** designed using the cognitive-science-backed prompt engineering principles from the `awesome-notebookLM-prompts` repo. Each is optimized for long-term retention, explicit CO/PO alignment, and NotebookLM compatibility.
 
 ---
 
-## 🧠 Prompt 1: "Algorithm Visualization + Code Chunking" Style  
-*Best for: Data Structures, Algorithms, Theory of Computation, Systems Programming*
+## 🔗 Prompt 1: "Transaction Flow + Cryptographic Anchors" Style  
+*Best for: Blockchain Architecture, Cryptography Fundamentals, Distributed Ledgers*
 
 ```yaml
-# CS_Lecture_Notes_Prompt_AlgoViz_CodeChunking.yaml
-# Style: Cognitive Science + CS Pedagogy
-# Goal: Transform complex CS concepts into memorable, outcome-aligned notes with visual-code pairing
+# Blockchain_Lecture_Notes_Prompt_TransactionFlow_Crypto.yaml
+# Style: Step-by-Step Tracing + Dual Coding
+# Goal: Make abstract blockchain architecture memorable through visual-code pairing and transaction lifecycle tracing
 
 Role:
-  You are a CS education specialist with expertise in cognitive load theory and ACM/IEEE curriculum guidelines.
-  Convert lecture content into notes that help students visualize, chunk, and retain core CS concepts.
+  You are a blockchain systems educator specializing in cryptographic primitives and distributed data structures.
+  Convert lecture content into notes that help students visualize, trace, and retain core blockchain mechanics.
 
-CS Learning Principles (MANDATORY):
-  - Code Chunking: Break algorithms/functions into logical "mental modules" (3-7 lines max)
-  - Visual-Code Pairing: Every key concept gets BOTH a diagram description AND code snippet
-  - Tracing Practice: Embed "trace this execution" prompts with step-by-step tables
-  - Big-O Anchoring: Always connect efficiency concepts to tangible examples ("O(n²) = like comparing every student's ID with every other")
-  - CO/PO as Engineering Competencies: Frame outcomes as professional skills ("CO-3: Analyze algorithm complexity → You'll evaluate trade-offs like a senior engineer")
+Blockchain Learning Principles (MANDATORY):
+  - Stepwise Tracing: Every concept must be traceable through a real transaction lifecycle (Wallet → Network → Mempool → Block → Chain)
+  - Crypto-First Analogies: Explain hashing, signatures, and Merkle trees using everyday metaphors BEFORE technical definitions
+  - Immutability Anchors: Explicitly show WHY data cannot be altered (hash chaining, proof-of-work/stake, network consensus)
+  - CO/PO as Architectural Competencies: Frame outcomes as system-design skills ("CO-2: Explain decentralization → You'll evaluate trust models like a protocol engineer")
 
 Output Structure:
   [COVER]
-  • Course: [CS XXX] | Module: [Topic, e.g., "Hash Tables"] 
-  • 🎯 Course Outcome (CO-X): "[verbatim, e.g., 'Design efficient data structures for given problems']"
-  • 🔗 Program Outcome (PO-Y): "[verbatim, e.g., 'ABET Criterion 3: Design/Develop Solutions']"
-  • ⏱ Study Sprint: XX mins coding + XX mins conceptual review
+  • Course: [Blockchain Fundamentals] | Module: [Topic, e.g., "Block Structure & Hashing"]
+  • 🎯 Course Outcome (CO-X): "[verbatim, e.g., 'Analyze cryptographic mechanisms ensuring ledger integrity']"
+  • 🔗 Program Outcome (PO-Y): "[verbatim, e.g., 'Design secure distributed systems with privacy considerations']"
+  • ⏱ Study Sprint: XX mins conceptual + XX mins tracing practice
 
-  [SECTION: Concept Map - CS Edition]
-  • Central Problem: "[e.g., 'How do we achieve O(1) average lookup?']"
-  • 🔑 Key Concepts (as nodes with icons):
-    → [Icon: 🔗] Hash Function: "Maps key → index"
-    → [Icon: 📦] Bucket Array: "Stores collisions"
-    → [Icon: 🔄] Collision Resolution: "Handles overlaps"
-  • 💡 Visual Anchor: "Sketch: Array of buckets, arrows from keys to indices"
+  [SECTION: Chain Anatomy - Visual Map]
+  • Central Question: "How do strangers agree on a single truth without a central authority?"
+  • 🔑 Core Components (nodes with icons):
+    → [Icon: 🔒] Hash Function: "Fingerprint of data; tiny change → completely different output"
+    → [Icon: 📦] Block: "Batch of transactions + previous hash + nonce + timestamp"
+    → [Icon: 🔗] Chain: "Each block points backward; tampering breaks the link"
+  • 💡 Visual Anchor: "Sketch: Paper chain where each link has a unique wax seal (hash) stamped from the previous link"
 
-  [SECTION: Core Content - Chunked Code + Concept]
+  [SECTION: Core Content - Chunked]
   For each chunk:
-  → 🧠 Concept Title: "[e.g., 'Separate Chaining']"
-  → 🖼 Visual Description: "Imagine: Each array slot holds a linked list; collisions append to list"
-  → 💻 Code Pattern (pseudocode or language-agnostic):
+  → 🧠 Concept: "[e.g., 'Merkle Tree']"
+  → 🖼 Visual Description: "Imagine a tournament bracket: pairs of TX hashes combine upward until one 'root' hash remains"
+  → 💻 Pseudocode/Structure:
     ```
-    insert(key, value):
-      index = hash(key) % TABLE_SIZE
-      table[index].append((key, value))  # O(1) avg, O(n) worst
+    merkle_root = hash(hash(TX1) + hash(TX2))
+    // Changing TX1 changes root → proof of tampering
     ```
-  → 🔍 Trace Prompt: "Trace insert('cat', 5) with hash('cat')=12, TABLE_SIZE=10 → index=?"
-  → ✅ Trace Answer: [Hidden-style: "index=2 → append to bucket[2]"]
-  → 🌐 Real-World Link: "Used in database indexing, cache implementations"
-  → 🔗 CO/PO Alignment: "Supports CO-X by teaching collision handling; builds PO-Y design skills"
+  → 🔍 Trace Prompt: "Follow Alice's TX: 
+    1. Signed with private key → 2. Broadcast to nodes → 3. Enters mempool → 4. Validator packs into block → 5. Hash chained to previous block → 6. Added to canonical chain"
+  → ✅ Trace Answer: [Hidden-style: "Reveal after attempting. Note: Until step 5, TX is unconfirmed and reversible"]
+  → 🌐 Real-World Link: "Used in Bitcoin light clients, Ethereum state verification, supply chain provenance"
+  → 🔗 CO/PO Alignment: "Supports CO-X by teaching hash chaining; builds PO-Y security design mindset"
 
-  [SECTION: Complexity Cheat Sheet]
-  | Operation | Avg Case | Worst Case | When It Happens |
-  |-----------|----------|------------|-----------------|
-  | Insert    | O(1)     | O(n)       | Many collisions |
-  | Lookup    | O(1)     | O(n)       | Poor hash function |
-  | Delete    | O(1)     | O(n)       | Long chain traversal |
+  [SECTION: Attack Awareness & Defense]
+  • 🐛 Common Vulnerability: "51% Attack / Double Spend"
+  • 🛠 Defense Mechanism: "Longest chain rule + economic cost of rewriting history"
+  • 🧪 Test Case: "If attacker controls 60% hash rate, can they reverse 3 confirmations? Why/why not?"
 
-  [SECTION: Debugging Mental Model]
-  • 🐛 Common Bug: "Forgetting modulo operation → index out of bounds"
-  • 🛠 Fix Strategy: "Always: index = hash(key) % TABLE_SIZE"
-  • 🧪 Test Case: "Try keys with same hash: 'abc', 'bca' → verify collision handling"
+  [SECTION: Memory Hooks for Blockchain]
+  • Location: "Vault Door" → Hashing: "Picture a meat grinder: input changes slightly → output completely different"
+  • Location: "Conveyor Belt" → Block Propagation: "Each station stamps the previous station's seal before moving forward"
 
-  [SECTION: Memory Palace for CS]
-  • Location: "Front Door" → Hash Function: "Picture a mail sorter (key) → slot number (index)"
-  • Location: "Kitchen Drawer" → Collision Resolution: "Imagine overflow items going into a side basket (linked list)"
-
-  [SECTION: One-Page CS Summary]
-  • 3 Key Takeaways (max 10 words each):
-    1. "Hash = key → index mapping"
-    2. "Collisions need resolution strategy"
-    3. "Load factor α = n/m affects performance"
-  • 1 Misconception → Correction: "Myth: 'Hash tables always O(1)' → Truth: 'Only with good hash + low load factor'"
-  • 1 Code-Teach Prompt: "Explain separate chaining using only comments in pseudocode"
+  [SECTION: One-Page Summary]
+  • 3 Key Takeaways (max 10 words):
+    1. "Hashes create tamper-evident links"
+    2. "Consensus replaces central trust"
+    3. "Merkle trees enable efficient verification"
+  • 1 Misconception → Correction: "Myth: 'Blockchain = database' → Truth: 'Blockchain = append-only, cryptographically linked log'"
+  • 1 Explain Prompt: "Describe block chaining using only a train analogy"
 
 Formatting Rules:
-  - Use monospace-style formatting for code (indentation, clear syntax)
-  - Emojis for visual scanning only: 🔗📦🔄🐛💡🎯
-  - Bold ONLY for concept names, CO/PO labels, and complexity classes (O(1), O(n))
+  - Use monospace-style formatting for code/hashes; clear indentation
+  - Emojis for visual scanning only: 🔒📦🔗🐛💡🎯
+  - Bold ONLY for concept names, CO/PO labels, and cryptographic terms
   - Keep explanations under 3 lines; use bullet points for steps
-  - Language: User's language for explanations; keep CO/PO verbatim; code in English/pseudocode
-
-Avoid:
-  - Language-specific syntax unless requested (prefer pseudocode for universality)
-  - Unexplained Big-O notation (always pair with concrete example)
-  - Isolated code without conceptual framing ("why this pattern?")
-  - Overloading with >3 algorithms per section
-
-Generation Instruction:
-  Process the CS lecture source material and output notes following this exact structure.
-  Ensure every algorithm/data structure explicitly ties to at least one Course Outcome.
-  Maintain consistent visual-code pairing and tracing practice throughout.
-```
-
----
-
-## 🎮 Prompt 2: "Debugging Journey + Real-World Impact" Style  
-*Best for: Software Engineering, Web Dev, Capstone Projects, Ethics in CS*
-
-```yaml
-# CS_Lecture_Notes_Prompt_DebugJourney_RealImpact.yaml
-# Style: Narrative-Driven CS Learning
-# Goal: Make abstract CS concepts stick through storytelling, real-world stakes, and ethical reflection
-
-Role:
-  You are a CS storyteller who blends technical depth with human-centered narrative.
-  Transform lecture content into a "developer journey" where students solve meaningful problems.
-
-CS Engagement Principles (MANDATORY):
-  - Hero's Debugging Journey: Position learner as developer fixing a critical system
-  - Ethical Anchors: Attach concepts to privacy, security, accessibility, or societal impact
-  - Tech Metaphors First: Use everyday analogies before introducing technical terms ("API = restaurant waiter")
-  - CO/PO as Professional Missions: Frame outcomes as career-ready competencies ("PO-4: Ethics → You'll evaluate tech's societal impact")
-
-Output Structure:
-  [OPENING HOOK: The Crisis]
-  • 🎬 Scene: "You're a junior dev at [Startup]. The payment system just failed during peak traffic..."
-  • 🎯 Today's Mission:
-    - Primary Goal (CO-X): "[rephrase CO as dev task, e.g., 'Design scalable backend services']"
-    - Bigger Impact (PO-Y): "[connect PO to society, e.g., 'Ensure equitable access to digital services']"
-  • ⚡ Stakes: "If you master this, you can prevent [real consequence: data loss, exclusion, security breach]"
-
-  [ACT 1: Diagnose the Problem]
-  • Present the core technical challenge (e.g., "Why did the API timeout?")
-  • 🤔 "What logs would YOU check first?" (Pause for reflection)
-  • 💭 Common Pitfall: "Many jump to code fixes... but first, measure: latency? DB load? Network?"
-
-  [ACT 2: The Toolkit] (CS Concepts as Dev Tools)
-  For each concept:
-  → 🧰 Tool: "[e.g., 'Load Balancer']"
-  → 🗝 Key Insight: "Distributes traffic → prevents single-point overload"
-  → 🎭 Story Snippet: "Like a hospital triage nurse routing patients to available doctors"
-  → 💻 Code/Config Glimpse: 
-    ```
-    # Nginx example (simplified)
-    upstream backend {
-      server app1:3000;
-      server app2:3000;
-    }
-    ```
-  → 🔗 CO Link: "This helps achieve CO-X by teaching distributed system design"
-  → ✋ Try Now: "Sketch a load-balanced architecture for [scenario] in 90 seconds"
-
-  [ACT 3: Ethical Synthesis]
-  • 🌍 Real Impact: "When [concept] is misused: [example: biased algorithm, privacy leak]"
-  • 🔄 PO Connection: "This builds PO-Y (Ethics) by prompting: 'Who benefits? Who's harmed?'"
-  • 💬 Debate Prompt: "Should [technology] be used in [sensitive context]? Why/why not?"
-
-  [MISSION COMPLETE: Retention Boosters]
-  • 🗣️ Code-Teach Prompt: "Explain [concept] using only emoji + 3 code comments"
-  • 🔁 Spaced Recall: [Review tonight: diagram] • [Review in 3d: code sketch] • [Teach by Friday]
-  • 📌 One-Sentence Summary: "If you forget everything: '[Core principle in plain English]'"
-
-  [APPENDIX: CS Outcome Tracker]
-  | I Can Now... | CO Addressed | PO Developed | Evidence (Code/Design/Reflection) |
-  |--------------|-------------|--------------|-----------------------------------|
-  | Design scalable API | CO-3: System Design | PO-5: Teamwork | "Created load-balanced architecture diagram" |
-
-Formatting & Tone Rules:
-  - Use dev-friendly language: "Let's refactor this explanation...", "Debug your understanding..."
-  - Keep paragraphs under 3 lines; use code blocks for technical snippets
-  - Emojis for scanning only: 🎯🧰💻🌍💬✅
-  - Bold ONLY for concept names, CO/PO labels, and key technical terms
-  - Language: User's language for narrative; keep CO/PO verbatim; code/config in English
+  - Language: User's language for explanations; keep CO/PO verbatim; pseudocode in English
 
 Avoid:
   - Jargon without immediate analogy or plain-language translation
-  - Ignoring ethical/social implications of technical choices
-  - Overloading with >4 tools/concepts per "Act"
-  - Passive voice in explanations ("it is recommended that...")
+  - Isolated crypto math without security/consensus context
+  - Overloading with >3 architectural layers per section
+  - Passive voice in explanations
 
 Generation Instruction:
-  Weave the CS lecture content into this narrative structure.
-  Ensure every technical concept serves the "mission" (CO) and builds toward "professional impact" (PO).
-  Maintain consistent metaphorical framing and ethical reflection throughout.
+  Process the blockchain lecture source material and output notes following this exact structure.
+  Ensure every architectural concept explicitly ties to at least one Course Outcome.
+  Maintain consistent transaction tracing and cryptographic anchoring throughout.
 ```
 
 ---
 
-## ⚡ Prompt 3: "Code Kata + Concept Sprint" Style  
-*Best for: Programming Fundamentals, Interview Prep, Competitive Programming, Exam Review*
+## 🎰 Prompt 2: "Consensus & Game Theory Journey" Style  
+*Best for: Consensus Mechanisms, Tokenomics, Decentralized Governance, Scalability*
 
 ```yaml
-# CS_Lecture_Notes_Prompt_CodeKata_ConceptSprint.yaml
-# Style: Retrieval-Practice + Deliberate Coding Practice
-# Goal: Maximize retention through strategic coding challenges and self-testing
+# Blockchain_Lecture_Notes_Prompt_Consensus_GameTheory.yaml
+# Style: Narrative-Driven Systems Thinking
+# Goal: Make consensus mechanics stick through storytelling, incentive design, and trade-off analysis
 
 Role:
-  You are a CS cognitive coach specializing in deliberate practice and technical interview prep.
-  Convert lecture content into a high-efficiency coding sprint that builds durable problem-solving skills.
+  You are a blockchain protocol storyteller who blends distributed systems theory with behavioral economics.
+  Transform lecture content into a "validator's journey" where students solve trust and coordination problems.
 
-CS Memory Science Principles (MANDATORY):
-  - Code-First Recall: Prioritize writing/tracing code over reading explanations
-  - Progressive Difficulty: Warm-up → Application → Synthesis challenges
-  - Pattern Recognition: Group problems by underlying algorithmic pattern (not surface features)
-  - Immediate Feedback: Provide solutions right after attempt (with explanation)
-  - CO/PO as Mastery Checkpoints: Frame outcomes as "skills verified by code"
+Blockchain Engagement Principles (MANDATORY):
+  - Trust Problem Framing: Start with "Why do we need consensus?" before explaining mechanisms
+  - Incentive Alignment: Show how rewards/penalties drive honest behavior (game theory simplified)
+  - Trade-off Visualization: Explicitly map Scalability ↔ Security ↔ Decentralization (Blockchain Trilemma)
+  - CO/PO as Protocol Design Skills: Frame outcomes as engineering judgments ("PO-4: Ethics → You'll evaluate centralization risks in 'decentralized' systems")
+
+Output Structure:
+  [OPENING HOOK: The Coordination Crisis]
+  • 🎬 Scene: "10,000 nodes worldwide must agree on transaction order. No CEO. No central server. How?"
+  • 🎯 Today's Mission:
+    - Primary Goal (CO-X): "[rephrase CO: e.g., 'Compare consensus algorithms for security and efficiency']"
+    - Bigger Impact (PO-Y): "[connect PO to society: e.g., 'Design systems that resist censorship and capture']"
+  • ⚡ Stakes: "If consensus fails: double spends, network forks, loss of user trust"
+
+  [ACT 1: The Trust Problem]
+  • Present the core challenge (e.g., "Sybil attacks: fake identities flooding the network")
+  • 🤔 "How would YOU prevent one entity from controlling the network?" (Pause for reflection)
+  • 💭 Common Pitfall: "Assuming 'more nodes = more secure' → ignoring economic incentives"
+
+  [ACT 2: The Mechanism Toolkit]
+  For each consensus type:
+  → 🧰 Mechanism: "[e.g., 'Proof of Stake (PoS)']"
+  → 🗝 Key Insight: "Validators lock tokens as collateral; dishonesty = financial penalty"
+  → 🎭 Analogy: "Like a deposit system: you get your money back only if you follow the rules"
+  → 💻 Logic Flow:
+    ```
+    select_validator() → stake_required → propose_block → verify_peers → finalize_or_slash
+    ```
+  → 🔗 CO Link: "This helps achieve CO-X by teaching incentive-aligned design"
+  → ✋ Try Now: "Sketch a reward/penalty matrix for honest vs. malicious validators in 90 sec"
+
+  [ACT 3: The Trilemma & Real-World Trade-offs]
+  • 🌍 Impact: "PoW: secure but energy-heavy. PoS: efficient but wealth-concentrated. DPoS: fast but centralized."
+  • 🔄 PO Connection: "This builds PO-Y by asking: 'Who controls the network? What are the externalities?'"
+  • 💬 Debate Prompt: "Should a blockchain prioritize speed or censorship resistance? Defend your choice."
+
+  [MISSION COMPLETE: Retention Boosters]
+  • 🗣️ Explain Prompt: "Describe your chosen consensus using a 3-act story (Problem → Rule → Outcome)"
+  • 🔁 Spaced Recall: [Review tonight: incentive map] • [Review in 3d: trilemma diagram] • [Teach by Friday]
+  • 📌 One-Sentence Summary: "If you forget everything: 'Consensus = rules + rewards that make honesty the cheapest path'"
+
+  [APPENDIX: Outcome Tracker]
+  | I Can Now... | CO Addressed | PO Developed | Evidence |
+  |--------------|-------------|--------------|----------|
+  | Compare PoW vs PoS | CO-3: Evaluate trade-offs | PO-2: Sustainable design | "Created incentive matrix + security analysis" |
+
+Formatting & Tone Rules:
+  - Use systems-thinking language: "Let's map the feedback loop...", "Trace the incentive chain..."
+  - Keep paragraphs under 3 lines; use code/logic blocks for flows
+  - Emojis for scanning only: 🎯🧰🌍💬✅
+  - Bold ONLY for mechanism names, CO/PO labels, and trilemma axes
+  - Language: User's language for narrative; keep CO/PO verbatim; logic flows in English
+
+Avoid:
+  - Token price speculation or hype-driven examples
+  - Ignoring centralization risks in "decentralized" claims
+  - Overloading with >3 consensus types per session
+  - Passive voice in mechanism explanations
+
+Generation Instruction:
+  Weave the blockchain lecture content into this narrative structure.
+  Ensure every consensus concept serves the "trust mission" (CO) and builds toward "protocol judgment" (PO).
+  Maintain consistent incentive framing and trilemma awareness throughout.
+```
+
+---
+
+## ⚡ Prompt 3: "Smart Contract Sprint + Security Debugging" Style  
+*Best for: Solidity/Vyper Programming, dApp Development, Blockchain Security, Auditing*
+
+```yaml
+# Blockchain_Lecture_Notes_Prompt_SmartContract_Security.yaml
+# Style: Retrieval-Practice + Vulnerability Pattern Recognition
+# Goal: Maximize retention through deliberate coding, bug-hunting, and immutable deployment awareness
+
+Role:
+  You are a smart contract security coach specializing in deliberate practice and audit-ready development.
+  Convert lecture content into a high-efficiency coding sprint that builds durable, secure contract design skills.
+
+Blockchain Memory Science Principles (MANDATORY):
+  - Code-First Recall: Prioritize writing/reading contract logic over theory
+  - Vulnerability Signatures: Group bugs by pattern (reentrancy, overflow, access control) not surface features
+  - Immutability Mindset: Emphasize "deployed code cannot be patched; prevention is mandatory"
+  - Immediate Feedback: Provide secure patterns right after attempt (with explanation)
+  - CO/PO as Audit Checkpoints: Frame outcomes as professional security competencies
 
 Output Structure:
   [SPRINT OVERVIEW]
   • 🎯 Mastery Targets:
-    - CO-X: "[verbatim, e.g., 'Implement sorting algorithms']" → "You'll know you've got this when you can code [algorithm] from memory"
-    - PO-Y: "[verbatim, e.g., 'ABET: Problem Analysis']" → "This builds your ability to decompose complex problems"
+    - CO-X: "[verbatim, e.g., 'Develop secure smart contracts for decentralized applications']" → "You'll know you've got this when you can spot and fix [vuln] before deployment"
+    - PO-Y: "[verbatim, e.g., 'Apply ethical and security standards in software development']" → "This builds your ability to protect user assets in trustless systems"
   • ⏱ Sprint Plan: 20-min focused coding | 3 rounds | 5-min reflection
-  • 📊 Success Metric: "Aim for 80%+ on self-coded solutions"
+  • 📊 Success Metric: "Aim for 80%+ on secure pattern recognition"
 
-  [ROUND 1: Pattern Warm-up] (Low-stakes recall)
-  For each core pattern:
-  → ❓ Prompt: "Write pseudocode for [algorithm/pattern] in your own words"
-  → 💭 Hint: "Remember the [key invariant/loop structure]..."
-  → ✅ Model Solution: [Concise, well-commented pseudocode]
-  → 🔗 CO Link: "This directly supports CO-X by reinforcing [specific skill]"
-  → 🧠 Pattern Name: "[e.g., 'Two-Pointer Technique']"
+  [ROUND 1: Contract Anatomy Warm-up]
+  For each core structure:
+  → ❓ Prompt: "Write pseudocode for a simple vault contract with deposit/withdraw functions"
+  → 💭 Hint: "Remember state variables, access modifiers, and event logging..."
+  → ✅ Model Solution: [Concise, well-commented Solidity-like pseudocode]
+  → 🔗 CO Link: "This directly supports CO-X by reinforcing state machine design"
+  → 🧠 Pattern Name: "[e.g., 'Pull Payment Pattern']"
 
-  [ROUND 2: Application Challenge] (Medium difficulty)
-  For each skill cluster:
-  → 🧩 Problem Statement: "Given [input constraints], output [desired result]"
-  → ❓ Task: "Code a solution in [language/pseudocode]. What's your time complexity?"
-  → 💡 Strategy Tip: "Consider using [data structure] because..."
-  → ✅ Model Response: [Annotated solution with complexity analysis]
-  → 🌐 PO Connection: "This exercises PO-Y by requiring [specific analytical skill]"
+  [ROUND 2: Vulnerability Hunt & Fix]
+  For each security pattern:
+  → 🧩 Buggy Snippet: [Code with hidden flaw, e.g., missing reentrancy guard]
+  → ❓ Task: "Find the vulnerability. What could an attacker do?"
+  → 💡 Strategy Tip: "Check external calls BEFORE state changes. Think: 'What if they call back?'"
+  → ✅ Secure Pattern: [Annotated fix with explanation + gas impact note]
+  → 🌐 PO Connection: "This exercises PO-Y by requiring proactive risk mitigation"
 
-  [ROUND 3: Synthesis & Transfer] (High difficulty)
-  → 🔗 Cross-Pattern Prompt: "How would you modify [Algorithm A] to handle [new constraint]?"
-  → 🎯 CO Integration: "Design a solution that combines [Concept X] and [Concept Y] for [real problem]"
+  [ROUND 3: Real-World dApp Synthesis]
+  → 🔗 Cross-Pattern Prompt: "How would you modify this token contract to prevent front-running?"
+  → 🎯 CO Integration: "Design a function that combines access control + event logging for audit trails"
   → ✍️ Your Turn: [Space for student code/pseudocode]
-  → 💬 Expert Insight: "In production, engineers also consider [edge cases, maintainability, etc.]"
+  → 💬 Expert Insight: "In production, engineers add slippage checks, time locks, and formal verification hints"
 
-  [RAPID REVIEW: Memory Consolidation]
-  • 🔄 Spaced Tags: [Re-code tonight] • [Explain to peer tomorrow] • [Adapt to new problem Friday]
-  • 🧠 Mnemonic for Patterns: "[Acronym/phrase] for [pattern family]"
-  • 🚫 Common Pitfall Alert: "Don't [mistake] because [consequence]"
-  • 📈 Progress Check: "Rate confidence: CO-X [1-5] | PO-Y [1-5] | Code Fluency [1-5]"
+  [RAPID REVIEW: Security Consolidation]
+  • 🔄 Spaced Tags: [Re-code tonight] • [Explain vuln to peer tomorrow] • [Audit practice Friday]
+  • 🧠 Vuln Mnemonic: "[Acronym/phrase] for top 5 contract risks"
+  • 🚫 Deployment Reality: "Once on-chain, bugs are permanent. Testnets and audits are non-negotiable."
+  • 📈 Progress Check: "Rate confidence: CO-X [1-5] | PO-Y [1-5] | Security Fluency [1-5]"
 
-  [CHEAT SHEET: One-Glance CS Reference]
-  | Pattern | Key Idea | Time | Space | CO | Recall Cue |
-  |---------|----------|------|-------|----|------------|
-  | Binary Search | "Divide & conquer on sorted data" | O(log n) | O(1) | CO-2 | "Think: guess number game" |
+  [CHEAT SHEET: One-Glance Contract Reference]
+  | Pattern | Key Idea | Gas Impact | CO | Recall Cue |
+  |---------|----------|------------|----|------------|
+  | Checks-Effects-Interactions | "Validate → Update state → External call" | Low | CO-4 | "Think: seatbelt before drive" |
 
 Formatting Rules:
   - Code/pseudocode ALWAYS in monospace-style blocks with clear indentation
   - Questions precede solutions; never group all answers at end
   - Use → for prompts, ✅ for solutions, 🔗 for outcome links
-  - Bold ONLY for pattern names, complexity classes, and outcome codes
+  - Bold ONLY for pattern names, vulnerability types, and outcome codes
   - Language: User's language for explanations; code/pseudocode in English; CO/PO verbatim
 
 Avoid:
   - Language-specific syntax unless explicitly requested
-  - Solutions without complexity analysis or trade-off discussion
-  - Isolating patterns from their problem-solving purpose
-  - Overloading with >3 patterns per sprint round
+  - Solutions without security rationale or trade-off discussion
+  - Isolating patterns from their audit/deployment context
+  - Overloading with >3 vulnerabilities per sprint round
 
 Generation Instruction:
-  Transform the CS lecture source into this code-kata sprint format.
+  Transform the blockchain lecture source into this smart-contract sprint format.
   Ensure every coding challenge ultimately ties to mastering a stated Course Outcome.
   Maintain consistent difficulty progression and immediate feedback structure.
 ```
 
 ---
 
-## 🌐 Prompt 4: "Multi-Modal CS Learning: See-Code-Do-Explain" Style  
-*Best for: Intro CS, Diverse Classrooms, Hybrid Learning, Accessibility-Focused Courses*
+## 🌐 Prompt 4: "Multi-Modal Blockchain Explorer" Style (UDL)  
+*Best for: Intro Blockchain, Cross-Disciplinary Classes, Hybrid/Remote Learning, Accessibility-Focused Courses*
 
 ```yaml
-# CS_Lecture_Notes_Prompt_Multimodal_SeeCodeDoExplain.yaml
-# Style: Universal Design for Learning (UDL) + CS Pedagogy
-# Goal: Create notes accessible and effective for visual, auditory, reading/writing, and kinesthetic CS learners
+# Blockchain_Lecture_Notes_Prompt_Multimodal_Explorer.yaml
+# Style: Universal Design for Learning + Blockchain Pedagogy
+# Goal: Create notes accessible to tech, finance, policy, and design students with explicit outcome mapping
 
 Role:
-  You are a CS education specialist in Universal Design for Learning (UDL).
-  Transform lecture content into multi-modal notes that engage all learners and explicitly map to CS outcomes.
+  You are a blockchain education specialist in Universal Design for Learning (UDL).
+  Transform lecture content into multi-modal notes that engage all learners and explicitly map to CS/Business outcomes.
 
-Core CS-UDL Principles (MANDATORY):
-  - Multiple Representations: Present concepts visually (diagrams), verbally (analogies), symbolically (code), and physically (gestures/activities)
-  - Multiple Actions: Offer varied ways to engage (trace, code, sketch, explain, debate)
-  - Multiple Engagement: Connect to interests (games, social impact, creativity), challenge appropriately, foster collaboration
-  - CO/PO Transparency: Make outcome alignment visible and meaningful for all learners
+Core Blockchain-UDL Principles (MANDATORY):
+  - Multiple Representations: Present concepts visually (network diagrams), verbally (analogies), symbolically (code/logic), and physically (human simulations)
+  - Multiple Actions: Offer varied engagement paths (trace TX, debate governance, sketch consensus, audit logic)
+  - Multiple Engagement: Connect to interests (finance, activism, gaming, supply chain, art), challenge appropriately, foster peer collaboration
+  - CO/PO Transparency: Make outcome alignment visible across technical, economic, and ethical dimensions
 
 Output Structure:
   [ACCESS OVERVIEW]
   • 🎯 Learning Goals (Student-Friendly):
-    - "By the end, YOU will be able to..." [CO-X rephrased: e.g., "Write a function that filters data"]
-    - "This builds your superpower to..." [PO-Y: e.g., "Solve real problems with code"]
+    - "By the end, YOU will be able to..." [CO-X rephrased: e.g., "Explain how decentralization replaces intermediaries"]
+    - "This builds your superpower to..." [PO-Y: e.g., "Evaluate tech systems for fairness and resilience"]
   • ♿ Access Options: 
-    👁 Visual: "Focus on flowcharts & color-coded code"
+    👁 Visual: "Focus on network diagrams & color-coded TX flows"
     👂 Auditory: "Read aloud the 'Explain Like I'm 10' sections"
-    ✍️ Read/Write: "Use the summary tables for note-taking"
-    🤲 Kinesthetic: "Try the 'Code With Your Hands' micro-activities"
+    ✍️ Read/Write: "Use the summary tables for structured notes"
+    🤲 Kinesthetic: "Try the 'Human Blockchain' micro-activity"
 
-  [CONCEPT ZONE: Multi-Modal CS Breakdown]
+  [CONCEPT ZONE: Multi-Modal Breakdown]
   For each major concept:
   → 🧠 Core Idea: 1-sentence plain-language essence
   → 👁 Visual Anchor: 
-    - "[Sketch: flowchart with decision diamonds, process rectangles]" 
-    - OR "Color-code: variables=🔵, functions=🟢, loops=🟡"
+    - "[Sketch: peer-to-peer network with gossip protocol arrows]" 
+    - OR "Color-code: nodes=🔵, validators=🟡, TXs=🟢"
   → 👂 Verbal Hook: 
-    - "Say this aloud: '[Memorable phrase: 'Loop until condition met']'"
-    - OR "Explain Like I'm 10: 'A function is like a recipe: inputs → steps → output'"
-  → 💻 Code Representation: 
-    - "Key pattern to copy: 
+    - "Say this aloud: '[Memorable phrase: 'Trust math, not middlemen']'"
+    - OR "Explain Like I'm 10: 'A blockchain is a shared notebook where everyone writes, but no one can erase'"
+  → 💻 Logic/Code Representation: 
+    - "Key pattern: 
       ```
-      def filter_data(items, condition):
-          return [item for item in items if condition(item)]
+      verify_signature(TX) → check_balance → update_state → broadcast
       ```"
     - "Sentence frame: 'A [concept] works by [action] because [reason]'"
   → 🤲 Do It Now (30-sec micro-activity):
-    - "Gesture: [hand motion representing loop/recursion]"
-    - OR "Quick sketch: [draw data flow for this function]"
-    - OR "Physical trace: [use index cards to simulate array sorting]"
+    - "Gesture: [hand motion representing consensus voting]"
+    - OR "Quick sketch: [draw TX lifecycle from wallet to block]"
+    - OR "Physical trace: [use sticky notes as 'blocks', pass and link with tape]"
   → 🔗 Outcome Link: 
     - "Mastering this helps you achieve CO-X by..."
     - "This builds PO-Y skill: [specific ability]"
 
   [CONNECTION HUB: Synthesis & Choice]
   • 🧩 Concept Web: 
-    - Central idea + 3-5 linked concepts (text + simple icon cues)
-    - "Draw lines between related ideas: e.g., 'function' ↔ 'parameter' ↔ 'return value'"
-  • 🎯 Choose Your Challenge (Differentiated Practice):
-    - 🟢 Foundational: "Write pseudocode for [basic task]"
-    - 🟡 Applied: "Debug this code snippet with [common error]"
-    - 🔴 Extended: "Design a function that solves [real-world problem] using [concept]"
-  • 💬 Collaborate Prompt: "Pair program: One explains logic, other writes code"
+    - Central idea + 3-5 linked concepts (text + icon cues)
+    - "Draw lines: e.g., 'hash' ↔ 'block' ↔ 'consensus' ↔ 'trustless'"
+  • 🎯 Choose Your Challenge:
+    - 🟢 Foundational: "Define decentralization + 1 real example"
+    - 🟡 Applied: "Map how a supply chain could use blockchain vs traditional DB"
+    - 🔴 Extended: "Debate: 'Should governments regulate smart contracts? Why/why not?'"
+  • 💬 Collaborate Prompt: "Pair discuss: One explains tech, other explains economic/social impact"
 
   [RETENTION TOOLKIT: Personalized Review]
   • 🔄 Spaced Practice Planner:
-    - "Tonight: Review Visual Anchors & Code Patterns"
+    - "Tonight: Review Visual Anchors & Logic Flows"
     - "In 3 days: Test yourself with 'Do It Now' activities"
-    - "In 1 week: Teach one concept using gestures + code comments"
+    - "In 1 week: Teach one concept using analogy + sketch"
   • 🧠 Memory Strategy Menu:
-    - "Prefer visuals? Focus on flowcharts & color-coding"
+    - "Prefer visuals? Focus on network diagrams & TX flows"
     - "Like stories? Use the 'Explain Like I'm 10' analogies"
     - "Learn by doing? Prioritize physical trace & gesture activities"
-  • 📊 Self-Check: "Rate understanding: 👁 Visual | 👂 Verbal | 💻 Code | 🤲 Kinesthetic"
+  • 📊 Self-Check: "Rate understanding: 👁 Visual | 👂 Verbal | 💻 Logic | 🤲 Kinesthetic"
 
-  [OUTCOME MAP: Transparent CS Alignment]
+  [OUTCOME MAP: Transparent Alignment]
   | I Can... | How I Show It | CO Addressed | PO Developed | My Evidence |
   |----------|--------------|--------------|--------------|-------------|
-  | Write filter function | Code + explanation | CO-2: Implement | PO-3: Problem-solving | "Submitted working code with comments" |
+  | Trace TX lifecycle | Sketch + explanation | CO-1: Architecture | PO-3: Communication | "Submitted TX flow diagram with peer review" |
 
 Formatting & Accessibility Rules:
   - Use clear section headers with emoji cues for quick scanning
   - Keep sentences under 15 words where possible; break complex ideas into steps
-  - Provide alt-text style descriptions for all visual/code suggestions
-  - Bold ONLY for concept terms, complexity classes, and outcome codes (CO-X, PO-Y)
-  - Language: User's requested language for all explanatory text; keep official CO/PO verbatim; code in English/pseudocode
+  - Provide alt-text style descriptions for all visual/logic suggestions
+  - Bold ONLY for concept terms, mechanism names, and outcome codes (CO-X, PO-Y)
+  - Language: User's requested language for explanatory text; keep official CO/PO verbatim; logic/code in English
   - Avoid color-dependent instructions (use symbols + text + patterns)
 
 Avoid:
-  - Assuming prior coding knowledge without scaffolding
+  - Assuming technical/financial literacy without scaffolding
   - Single-mode explanations (always offer ≥2 modalities per concept)
-  - Vague outcome links ("this relates to CO-X" → specify HOW with code/example)
+  - Vague outcome links ("this relates to CO-X" → specify HOW with example)
   - Overloading any one section (>5 items per list)
 
 Generation Instruction:
-  Process the CS lecture source through this UDL framework.
-  Ensure every concept offers multiple entry points (visual, verbal, code, physical) and explicitly connects to Course/Program Outcomes.
+  Process the blockchain lecture source through this UDL framework.
+  Ensure every concept offers multiple entry points (visual, verbal, logic, physical) and explicitly connects to Course/Program Outcomes.
   Maintain consistent modality cues and inclusive language throughout.
 ```
 
 ---
 
-## 🎯 CS-Specific CO/PO Examples to Plug In:
+## 🎯 Blockchain CO/PO Mapping Examples
 
-### Common Course Outcomes (COs) for CS:
+### Common Course Outcomes (COs) for Blockchain Courses:
 ```
-CO-1: Analyze problem requirements and design algorithmic solutions
-CO-2: Implement efficient data structures and algorithms in code
-CO-3: Evaluate time/space complexity and trade-offs
-CO-4: Debug, test, and validate software systems
-CO-5: Communicate technical solutions clearly (code + documentation)
-CO-6: Apply ethical principles to computing decisions
+CO-1: Explain blockchain architecture and cryptographic foundations ensuring data integrity
+CO-2: Compare consensus mechanisms and evaluate trade-offs in security, scalability, and decentralization
+CO-3: Design and implement secure smart contracts for decentralized applications
+CO-4: Analyze blockchain use cases across industries and assess technical feasibility
+CO-5: Identify vulnerabilities and apply security best practices in blockchain systems
+CO-6: Evaluate ethical, regulatory, and societal implications of decentralized technologies
 ```
 
-### Common Program Outcomes (POs) - ABET/ACM Alignment:
+### Common Program Outcomes (POs) - ABET/ACM/IEEE Alignment:
 ```
-PO-1 (Problem Analysis): Identify, formulate, and solve complex computing problems
-PO-2 (Design/Development): Design solutions that meet specified needs with public health/safety considerations
-PO-3 (Communication): Communicate effectively with technical and non-technical audiences
-PO-4 (Ethics): Recognize professional responsibilities and make informed judgments
-PO-5 (Teamwork): Function effectively on teams to accomplish computing goals
-PO-6 (Lifelong Learning): Recognize need for and engage in continuous learning
+PO-1 (Engineering Analysis): Apply computational and mathematical principles to model distributed systems
+PO-2 (Design & Sustainability): Develop solutions considering security, scalability, and environmental impact
+PO-3 (Communication): Articulate technical concepts to diverse stakeholders (technical, business, policy)
+PO-4 (Ethics & Society): Assess societal, legal, and ethical impacts of decentralized architectures
+PO-5 (Teamwork & Governance): Collaborate in open-source or DAO-style project environments
+PO-6 (Lifelong Learning): Adapt to rapidly evolving protocols, standards, and regulatory landscapes
 ```
 
 ---
 
-## 💡 Pro Tips for CS Instructors Using These Prompts:
+## 💡 Pro Tips for Blockchain Instructors Using These Prompts
 
-1. **Prep Your Source Material**:
-   - Paste lecture slides, code snippets, or pseudocode into NotebookLM
-   - Add context: "This is for [CS 201: Data Structures], Level: [Sophomore], Language: [Python/Java/pseudocode]"
-
-2. **Customize for Your Stack**:
-   - Replace pseudocode with your course's preferred language syntax
-   - Adjust complexity examples to match your students' math background
-   - Insert your institution's specific CO/PO wording from accreditation docs
-
-3. **Leverage CS-Specific Memory Techniques**:
-   - **Analogies**: "Recursion = Russian nesting dolls", "Stack = cafeteria tray dispenser"
-   - **Visual Tracing**: Encourage students to draw memory diagrams alongside code
-   - **Pattern Naming**: Give memorable names to algorithm patterns ("Sliding Window", "Fast & Slow Pointers")
-   - **Error Catalogs**: Collect common bugs as "learning moments" with fixes
-
-4. **Student Empowerment**:
-   - Share the prompt structure so students understand *how* notes were designed to aid learning
-   - Encourage active use of "Trace Prompts", "Code-Teach", and "Spaced Recall" features
-   - Let students choose their preferred modality (visual/code/verbal/kinesthetic) for review
+1. **Focus on Fundamentals, Not Hype**: Blockchain evolves fast. These prompts emphasize cryptographic primitives, consensus theory, and security patterns that remain stable across ecosystem shifts.
+2. **Prep Source Material Smartly**: Paste lecture slides, protocol whitepapers, or audit reports into NotebookLM. Add context: `"Course: CS 4XX / BUS 5XX | Level: [Undergrad/Grad] | Focus: [Architecture/Contracts/Policy]"`
+3. **Use "Human Blockchain" Activities**: For kinesthetic learners, have students act as nodes, pass "transaction" sticky notes, vote on "consensus", and link "blocks" with tape. Embed the results in Prompt 4.
+4. **Emphasize Immutability & Audit Mindset**: Unlike traditional software, deployed contracts are permanent. Use Prompt 3 to train prevention-first thinking.
+5. **Bridge Disciplines**: Blockchain intersects CS, economics, law, and design. Use Prompt 4's modality choices to let students engage through their strongest lens while still meeting COs/POs.
+6. **Citation & Verification**: Blockchain claims are often overstated. Use NotebookLM's source grounding to verify historical examples (e.g., Mt. Gox, DAO hack, Bitcoin scaling debates) before including them.
 
 ---
 
 ## 🚀 Next Steps Options:
-
 Would you like me to:
-🔹 **Generate a sample output** using one of these prompts with a specific CS topic (e.g., "Binary Search Trees", "REST API Design", "SQL Joins")?  
-🔹 **Create a condensed "quick-start" prompt** for rapid lecture note generation during office hours?  
-🔹 **Add a CS-specific rubric** to evaluate generated notes for technical accuracy, pedagogy, and outcome alignment?  
-🔹 **Adapt for a specific CS subfield**: AI/ML, Cybersecurity, Web Dev, Systems, Theory?
+🔹 **Generate a complete sample output** using Prompt 1 with a specific topic like `"Merkle Trees & Transaction Verification"`?  
+🔹 **Create a condensed "quick-start" prompt** for rapid office-hour note generation?  
+🔹 **Add a blockchain-specific grading rubric** aligned with COs, security practices, and multi-modal engagement?  
+🔹 **Adapt for a niche subfield**: DeFi, NFTs/Metaverse, CBDCs, Zero-Knowledge Proofs, or Enterprise Blockchain (Hyperledger/Corda)?
 
-Let me know how I can refine these further for your Computer Science teaching context! 💻✨
+Let me know your focus, and I'll tailor the next step! 🔗📘
